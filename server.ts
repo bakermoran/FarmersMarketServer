@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import schema from './src/schema';
 const { graphqlHTTP } = require('express-graphql');
 const express = require('express');
 // const {
