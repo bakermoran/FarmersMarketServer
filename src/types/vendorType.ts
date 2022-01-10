@@ -1,3 +1,7 @@
+import { GraphQLList } from "graphql"
+import { marketResolver } from "./../resolvers/vendor"
+import { MarketType } from "."
+
 const {
   GraphQLInt,
   GraphQLNonNull,
@@ -17,6 +21,10 @@ export const VendorType = new GraphQLObjectType({
     address2: { type: GraphQLString },
     city: { type: GraphQLNonNull(GraphQLString) },
     state: { type: GraphQLNonNull(GraphQLString) },
-    zip: { type: GraphQLNonNull(GraphQLString) }
+    zip: { type: GraphQLNonNull(GraphQLString) },
+    markets: {
+      type: new GraphQLList(MarketType),
+      resolve: marketResolver
+    }
   })
 })

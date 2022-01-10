@@ -11,3 +11,12 @@ export const vendorSeed: interfaces.Vendor[] = [
 	{ id: 2, name: 'Les Deux Magots', location: 'St. Germain-des-pres', description: 'A classic french bistro', address1: '456 High St', address2: null, city: 'Columbus', state: 'OH', zip: '44444' },
   { id: 3, name: 'The French Laundry', location: 'Napa', description: 'A three michellin starred restaurant in Napa valley', address1: '111 Napa Rd', address2: null, city: 'Napa', state: 'CA', zip: '99742' },
 ];
+
+export const marketVendorSeed: interfaces.MarketVendorJoin[] = [
+	{ market_id: 1, vendor_id: 1 },
+	{ market_id: 1, vendor_id: 2 },
+  { market_id: 1, vendor_id: 3 },
+	{ market_id: 2, vendor_id: 2 },
+  { market_id: 2, vendor_id: 3 },
+	{ market_id: 3, vendor_id: 2 },
+];
